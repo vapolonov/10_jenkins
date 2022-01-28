@@ -4,6 +4,8 @@ import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
 import ru.apolonov.TestBase;
 
+import java.io.File;
+
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -62,8 +64,9 @@ public class RegistrationFormTest extends TestBase {
                 $("#hobbiesWrapper").$(byText(hobby2)).click();
                 $("#hobbiesWrapper").$(byText(hobby3)).click();
             });
-            step("Upload image", () ->
-                    $("#uploadPicture").uploadFromClasspath("resources/img/" + picture));
+            step("Upload image", () -> {
+                $("#uploadPicture").uploadFromClasspath("resources/img/" + picture);
+            });
             step("Set address", () -> {
                 $("#currentAddress").val(currentAddress);
                 $("#state").scrollTo().click();
