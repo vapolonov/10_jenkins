@@ -1,4 +1,4 @@
-package ru.apolonov.tests;
+package ru.apolonov.tests.simple;
 
 import org.junit.jupiter.api.Test;
 
