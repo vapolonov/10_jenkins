@@ -12,7 +12,8 @@ public class TestBase {
     @BeforeAll
     static void setup() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-        Configuration.browserSize = "1680x1050";
+        //Configuration.browserSize = "1680x1050";
+        Configuration.startMaximized = true;
 
         // запуск тестов на удаленном браузере Selenoid
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
