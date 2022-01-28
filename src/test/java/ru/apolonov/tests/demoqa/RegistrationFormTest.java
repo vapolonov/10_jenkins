@@ -65,7 +65,7 @@ public class RegistrationFormTest extends TestBase {
                 $("#hobbiesWrapper").$(byText(hobby3)).click();
             });
             step("Upload image", () -> {
-                $("#uploadPicture").uploadFromClasspath("resources/img/" + picture);
+                $("#uploadPicture").uploadFromClasspath("img/" + picture);
             });
             step("Set address", () -> {
                 $("#currentAddress").val(currentAddress);
