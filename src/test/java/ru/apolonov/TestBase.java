@@ -26,9 +26,11 @@ public class TestBase {
     }
 
     @AfterEach
+    // вызов методов из класса Attach для добавление скриншотов и видео в отчет после каждого теста
     public void tearDown() {
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.browserConsoleLogs();
+        Attach.addVideo();
     }
 }

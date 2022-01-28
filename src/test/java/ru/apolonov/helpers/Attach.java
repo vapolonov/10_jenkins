@@ -13,7 +13,7 @@ import java.nio.charset.StandardCharsets;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.openqa.selenium.logging.LogType.BROWSER;
 
-// При помощи данного класса добавляются аттачменты в Allure отчет (текст, сриншот, логи)
+// При помощи данного класса добавляются аттачменты в Allure отчет (текст, сриншот, логи, видео)
 
 public class Attach {
     @Attachment(value = "{attachName}", type = "text/plain")
