@@ -50,7 +50,7 @@ tasks.withType(Test) {
         }
     }
 }
-
+/*
 task properties_tests(type: Test) {
     //systemProperty("browserSize", System.getProperty("browserSize", "400x400")) // передаем значение по умолчанию,
     // в SystemPropertiesTests.java значенеи по умолчанию использоваться не будет
@@ -64,5 +64,11 @@ task many_tags_tests(type: Test) {
         includeTags "test4"
         includeTags "test5"
         excludeTags "test"
+    }
+}
+*/
+task owner_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "owner"
     }
 }
